@@ -30,6 +30,6 @@ class BaseConfig(BaseSettings):
     }
 
     # * INTEGRATIONS
-    slack_api_key: str = "xoxb-3752334830498-5145578835619-ZhOZV13n5iRFiB79NuWtx7mP"
+    slack_api_key: str = ""
 
     environment: Env = os.getenv("ENV", "dev")
