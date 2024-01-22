@@ -1,0 +1,85 @@
+from enum import Enum
+
+
+class OrderState(str, Enum):
+    NEW = "NEW"
+    PROCESSING = "PROCESSING"
+    PRE_TRANSIT = "PRE_TRANSIT"
+    IN_TRANSIT = "IN_TRANSIT"
+    DELIVERED = "DELIVERED"
+    PENDING_RETAILER_CONFIRMATION = "PENDING_RETAILER_CONFIRMATION"
+    BACKORDERED = "BACKORDERED"
+    CANCELED = "CANCELED"
+
+
+class StateToStateCode(str, Enum):
+    ALABAMA = "AL"
+    ALASKA = "AK"
+    ARIZONA = "AZ"
+    ARKANSAS = "AR"
+    CALIFORNIA = "CA"
+    COLORADO = "CO"
+    CONNECTICUT = "CT"
+    DELAWARE = "DE"
+    FLORIDA = "FL"
+    GEORGIA = "GA"
+    HAWAII = "HI"
+    IDAHO = "ID"
+    ILLINOIS = "IL"
+    INDIANA = "IN"
+    IOWA = "IA"
+    KANSAS = "KS"
+    KENTUCKY = "KY"
+    LOUISIANA = "LA"
+    MAINE = "ME"
+    MARYLAND = "MD"
+    MASSACHUSETTS = "MA"
+    MICHIGAN = "MI"
+    MINNESOTA = "MN"
+    MISSISSIPPI = "MS"
+    MISSOURI = "MO"
+    MONTANA = "MT"
+    NEBRASKA = "NE"
+    NEVADA = "NV"
+    NEW_HAMPSHIRE = "NH"
+    NEW_JERSEY = "NJ"
+    NEW_MEXICO = "NM"
+    NEW_YORK = "NY"
+    NORTH_CAROLINA = "NC"
+    NORTH_DAKOTA = "ND"
+    OHIO = "OH"
+    OKLAHOMA = "OK"
+    OREGON = "OR"
+    PENNSYLVANIA = "PA"
+    RHODE_ISLAND = "RI"
+    SOUTH_CAROLINA = "SC"
+    SOUTH_DAKOTA = "SD"
+    TENNESSEE = "TN"
+    TEXAS = "TX"
+    UTAH = "UT"
+    VERMONT = "VT"
+    VIRGINIA = "VA"
+    WASHINGTON = "WA"
+    WEST_VIRGINIA = "WV"
+    WISCONSIN = "WI"
+    WYOMING = "WY"
+
+
+class TaxType(str, Enum):
+    VAT = "VAT"
+    GST = "GST"
+    HST = "HST"
+    PST = "PST"
+    IMPORT_VAT = "IMPORT_VAT"
+    AUSTRALIA_GST = "AUSTRALIA_GST"
+    RECARGO = "RECARGO"
+
+
+class Effect(str, Enum):
+    INCREASES_PAYOUT = "INCREASES_PAYOUT"
+    DEDUCTED_FROM_PAYOUT = "DEDUCTED_FROM_PAYOUT"
+
+
+class TaxableItemType(str, Enum):
+    ORDER_ITEM = "ORDER_ITEM"
+    SHIPPING = "SHIPPING"
